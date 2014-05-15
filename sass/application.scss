@@ -1,0 +1,13 @@
+@import 'bourbon';
+
+$color: blue;
+
+body{
+  @include background(linear-gradient(red, orange) left no-repeat);
+  background-size: cover;
+  height: 100%;
+  color: white;
+
+  font-family: sans-serif;
+
+}

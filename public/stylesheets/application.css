@@ -1,0 +1,9 @@
+body {
+  background: -webkit-linear-gradient( #ff0000, #ffa500) left no-repeat;
+  background: linear-gradient( #ff0000, #ffa500) left no-repeat;
+  background-size: cover;
+  height: 100%;
+  color: white;
+  font-family: sans-serif; }
+
+/*# sourceMappingURL=application.css.map */
