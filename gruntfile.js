@@ -1,30 +1,35 @@
 module.exports = function(grunt) {
-  grunt.initConfig({
-    sass: {
-      dist: {
-        files: {
-          'public/stylesheets/application.css': 'sass/application.scss'
-        },
-        options: {
-          sourceComments: "map",
-          includePaths: [
-
-          ]
-        }
+grunt.initConfig({
+  compass: {                  // Task
+    dist: {                   // Target
+      options: {              // Target options
+        sassDir: 'sass',
+        cssDir: 'css',
+        environment: 'production',
+        raw: 'preferred_syntax = :sass\n'
       }
     },
-    watch: {
-      source: {
-        files: ['sass/**/*.scss', 'views/**/*.jade'],
-        tasks: ['sass'],
-        options: {
-          livereload: true, // needed to run LiveReload
-        }
+    dev: {                    // Another target
+      options: {
+        sassDir: 'sass',
+        cssDir: 'public/stylesheets'
       }
     }
-  });
+  }
+  // ,
+  // watch: {
+  //     source: {
+  //       files: ['sass/**/*.scss', 'views/**/*.jade'],
+  //       tasks: ['sass'],
+  //       options: {
+  //         livereload: true
+  //       }
+  //     }
+  //   }
 
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-sass');
-  grunt.registerTask('default', ['sass']);
+});
+
+  // grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-compass');
+  grunt.registerTask('default', ['compass']);
 };

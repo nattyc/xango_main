@@ -17,7 +17,7 @@
 6 error If you need help, you may report this *entire* log,
 6 error including the npm and node versions, at:
 6 error     <http://github.com/npm/npm/issues>
-7 error System Darwin 13.1.0
+7 error System Darwin 13.2.0
 8 error command "node" "/usr/local/bin/npm" "install"
 9 error cwd /Users/nattyc/Desktop/xango site mocks/xango_main
 10 error node -v v0.10.26
