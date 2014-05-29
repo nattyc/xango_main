@@ -15,21 +15,25 @@ grunt.initConfig({
         cssDir: 'public/stylesheets'
       }
     }
+  },
+watch: {
+  sass: {
+    files: ['sass/*.scss'],
+    tasks: ['compass:dist']
+  },
+  css: {
+    files: ['public/stylesheets/*.css']
+  },
+  livereload: {
+    files: ['public/stylesheets/*.css'],
+    options: { livereload: true }
   }
-  // ,
-  // watch: {
-  //     source: {
-  //       files: ['sass/**/*.scss', 'views/**/*.jade'],
-  //       tasks: ['sass'],
-  //       options: {
-  //         livereload: true
-  //       }
-  //     }
-  //   }
+}
+
 
 });
 
-  // grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.registerTask('default', ['compass']);
 };
